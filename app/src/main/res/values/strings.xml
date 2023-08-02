@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MovieApp</string>
+    <string name="todo">TODO</string>
+    <string name="overview">Overview</string>
 </resources>

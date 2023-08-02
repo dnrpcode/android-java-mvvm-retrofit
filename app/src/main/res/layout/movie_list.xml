@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/card_layout"
+        android:paddingVertical="18dp"
+        android:paddingStart="136dp"
+        android:paddingEnd="18dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textColor="?attr/boldText"
+            android:textSize="18sp"
+            tools:text="The hdfhsadoif aodisfoiasdoifhio oafhdsoihdfiohaodfio dfhaoi" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tagline"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@+id/title"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:fontFamily="@font/poppins_regular"-->
+        <!--            android:textColor="?attr/boldText"-->
+        <!--            android:textSize="14sp" />-->
+
+        <TextView
+            android:id="@+id/releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="?attr/regularText"
+            android:textSize="14sp"
+            tools:text="23 April 2021" />
+
+        <TextView
+            android:id="@+id/lang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="?attr/regularText"
+            android:textSize="14sp"
+            tools:text="Eng" />
+
+        <LinearLayout
+            android:id="@+id/dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69dp"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/ratingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/releaseDate"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/dots"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textColor="@color/material_blue"
+            android:textSize="14sp"
+            tools:text="8.5" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/posterViewModel"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="-170dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+    <color name="material_blue">#2196F3</color>
+    <color name="dotsBg">#192196F3</color>
+    <color name="dots_half">#802196F3</color>
+    <color name="material_red">#EC7474</color>
+    <color name="light_white">#FCFCFC</color>
+    <color name="dark">#0E121A</color>
+    <color name="light_dark">#171C26</color>
+    <color name="black_bold_text">#4F565E</color>
+    <color name="black_regular_text">#888F96</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_bold_text">#FCFCFC</color>
+    <color name="white_regular_text">#F2F5F6</color>
+
+    <attr format="color" name="card"/>
+    <attr format="color" name="bg"/>
+    <attr format="color" name="boldText"/>
+    <attr format="color" name="regularText"/>
+    <attr format="color" name="appbar"/>
+    <attr format="color" name="appbarAttribute"/>
 </resources>
