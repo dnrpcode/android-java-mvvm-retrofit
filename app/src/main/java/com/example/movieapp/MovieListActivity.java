@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toolbar;
 
@@ -86,8 +87,8 @@ public class MovieListActivity extends AppCompatActivity implements OnMovieListe
     @Override
     public void onMovieClick(int pos) {
         // here is going to detail movie that has clicked
-//        Intent intent = new Intent(this,DetailMovieActivity.class);
-//        intent.putExtra("movie",recycleViewAdapter.getSelectedMovie(pos));
-//        startActivity(intent);
+        Intent intent = new Intent(this,DetailMovieActivity.class);
+        intent.putExtra("movie",recycleViewAdapter.getSelectedMovie(pos));
+        startActivity(intent);
     }
 }

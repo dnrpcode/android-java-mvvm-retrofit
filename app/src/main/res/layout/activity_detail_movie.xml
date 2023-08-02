@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bg"
+    android:orientation="vertical"
+    tools:context=".DetailMovieActivity">
+
+    <ScrollView
+        android:background="?attr/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="550dp">
+
+                <ImageView
+                    android:id="@+id/posterDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/todo"
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/avatars" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleDetail"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:textColor="?attr/boldText"
+                    android:textSize="28sp"
+                    tools:text="The Irregular" />
+
+                <TextView
+                    android:id="@+id/releaseDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:maxWidth="150dp"
+                    android:textColor="?attr/boldText"
+                    android:textSize="18sp"
+                    tools:text="2 Aug 2023" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/genreDetail"-->
+                <!--                    android:layout_below="@+id/titleDetail"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginEnd="30dp"-->
+                <!--                    android:fontFamily="@font/poppins_medium"-->
+                <!--                    android:textColor="?attr/boldText"-->
+                <!--                    android:textSize="18sp"-->
+                <!--                    android:text="@string/action_adventure"/>-->
+
+                <TextView
+                    android:id="@+id/ratingTextDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleDetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:textColor="@color/material_blue"
+                    android:textSize="14sp"
+                    tools:text="8.5" />
+
+                <LinearLayout
+                    android:id="@+id/dotsDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleDetail"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@+id/ratingTextDetail"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/overviewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleDetail"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="@string/overview"
+                    android:textColor="@color/material_blue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/overview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/overviewTitle"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/overview"
+                    android:textColor="?attr/regularText"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

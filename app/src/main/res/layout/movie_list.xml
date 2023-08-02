@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <RelativeLayout
+     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -24,7 +24,7 @@
             android:fontFamily="@font/poppins_semi_bold"
             android:textColor="?attr/boldText"
             android:textSize="18sp"
-            tools:text="The hdfhsadoif aodisfoiasdoifhio oafhdsoihdfiohaodfio dfhaoi" />
+            tools:text="Contoh title movie yang panjang banget" />
 
         <!--        <TextView-->
         <!--            android:id="@+id/tagline"-->
