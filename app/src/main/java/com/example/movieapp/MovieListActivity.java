@@ -2,13 +2,13 @@ package com.example.movieapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toolbar;
 
 import com.example.movieapp.adapters.MovieRecycleView;
 import com.example.movieapp.adapters.OnMovieListener;
@@ -31,8 +31,8 @@ public class MovieListActivity extends AppCompatActivity implements OnMovieListe
         setContentView(R.layout.activity_movie_list);
 
         recyclerView = findViewById(R.id.recycleView);
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         popularMovieListViewModel = new ViewModelProvider(this).get(PopularMovieListViewModel.class);
 //        searchMovieListViewModel = new ViewModelProvider(this).get(SearchMovieListViewModel.class);
