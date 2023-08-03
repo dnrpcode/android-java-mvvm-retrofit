@@ -23,6 +23,6 @@ public class PopularMovieListViewModel extends ViewModel {
     }
 
     public void popularMovieNextPage(){
-        popularMovieRepository.getPopularMovie();
+        popularMovieRepository.popularMovieNextPage();
     }
 }

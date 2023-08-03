@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class PopularMovieResponses {
+public class SearchMovieResponses {
     @SerializedName("results")
     @Expose
     private List<MovieModel> movies;
@@ -17,7 +17,7 @@ public class PopularMovieResponses {
 
     @Override
     public String toString() {
-        return "MovieResponses{" +
+        return "SearchMovieResponses{" +
                 "movies=" + movies +
                 '}';
     }

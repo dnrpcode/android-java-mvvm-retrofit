@@ -34,7 +34,7 @@ public class PopularMovieRepository {
     }
 
     //next page
-    public void populatMovieNextPage(){
+    public void popularMovieNextPage(){
         getPopularMovie(page + 1);
     }
 

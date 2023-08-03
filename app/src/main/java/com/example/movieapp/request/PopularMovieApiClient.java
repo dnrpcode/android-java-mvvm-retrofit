@@ -30,19 +30,20 @@ public class PopularMovieApiClient {
     //live data
     private final MutableLiveData<List<MovieModel>> popularMovieLiveData;
 
+    //global variable for runnable
+    private PopularRunnable popularRunnable;
+
     private PopularMovieApiClient() {
         popularMovieLiveData = new MutableLiveData<>();
     }
 
-    //global variable for runnable
-    private PopularRunnable popularRunnable;
 
     public LiveData<List<MovieModel>> getPopularMovie() {
         return popularMovieLiveData;
     }
 
-    public void getPopularMovie(int page){
-        if(popularRunnable != null){
+    public void getPopularMovie(int page) {
+        if (popularRunnable != null) {
             popularRunnable = null;
         }
 
@@ -75,8 +76,7 @@ public class PopularMovieApiClient {
                     return;
                 }
 
-
-                System.out.println("response"+response);
+                System.out.println("response" + response);
                 if (response.isSuccessful()) {
                     if (response.code() == 200) {
                         assert response.body() != null;
@@ -85,12 +85,12 @@ public class PopularMovieApiClient {
                         if (page == 1) {
                             //set live data
                             popularMovieLiveData.postValue(popularMovieList);
-                        }else {
+                        } else {
                             List<MovieModel> currentMovie = popularMovieLiveData.getValue();
                             currentMovie.addAll(popularMovieList);
                             popularMovieLiveData.postValue(currentMovie);
                         }
-                    }else{
+                    } else {
                         assert response.errorBody() != null;
                         System.out.println(response.errorBody().string());
                         popularMovieLiveData.postValue(null);
