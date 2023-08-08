@@ -1,5 +1,6 @@
 package com.example.movieapp.utils;
 
+import com.example.movieapp.response.GenreResponses;
 import com.example.movieapp.response.PopularMovieResponses;
 import com.example.movieapp.response.SearchMovieResponses;
 
@@ -16,4 +17,7 @@ public interface MovieApi {
     Call<SearchMovieResponses> searchMovie(@Query("api_key") String key,
                                            @Query("query") String query,
                                            @Query("page") int page);
+
+    @GET("genre/movie/list")
+    Call<GenreResponses> getGenres(@Query("api_key") String key);
 }

@@ -2,22 +2,24 @@
     <!-- Base application theme. -->
     <style name="Theme.MovieApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/material_blue</item>
-        <item name="colorPrimaryVariant">@color/material_blue</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
         <item name="colorOnPrimary">@color/light_dark</item>
         <item name="bg">@color/dark</item>
         <item name="boldText">@color/white_bold_text</item>
         <item name="regularText">@color/white_regular_text</item>
         <item name="appbar">@color/dark</item>
         <item name="card">@color/light_dark</item>
-        <item name="appbarAttribute">@color/material_blue</item>
+        <item name="appbarAttribute">@color/primary</item>
+        <item name="border">@color/dark_accent</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/material_blue</item>
-        <item name="colorSecondaryVariant">@color/material_blue</item>
-        <item name="colorOnSecondary">@color/material_blue</item>
+        <item name="colorSecondary">@color/primary</item>
+        <item name="colorSecondaryVariant">@color/primary</item>
+        <item name="colorOnSecondary">@color/primary</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >@color/dark</item>
         <item name="android:windowLightStatusBar">false</item>
         <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/poppins_regular</item>
     </style>
 </resources>

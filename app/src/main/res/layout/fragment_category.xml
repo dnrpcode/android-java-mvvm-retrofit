@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    android:gravity="center"
+    android:padding="6dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imvCircular"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="?attr/border"
+        android:src="@drawable/ic_icon"
+        app:shapeAppearanceOverlay="@style/Circular" />
+
+    <TextView
+        android:id="@+id/nameCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:textSize="12sp"
+        tools:text="@string/romance" />
+
+</LinearLayout>

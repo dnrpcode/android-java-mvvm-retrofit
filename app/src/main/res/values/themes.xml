@@ -1,23 +1,72 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.MovieApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/material_blue</item>
-        <item name="colorPrimaryVariant">@color/material_blue</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="bg">@color/light_white</item>
         <item name="boldText">@color/black_bold_text</item>
         <item name="regularText">@color/black_regular_text</item>
         <item name="appbar">@color/light_white</item>
         <item name="card">@color/white</item>
-        <item name="appbarAttribute">@color/material_blue</item>
+        <item name="appbarAttribute">@color/primary</item>
+        <item name="border">@color/dark_accent</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/material_blue</item>
-        <item name="colorSecondaryVariant">@color/material_blue</item>
-        <item name="colorOnSecondary">@color/material_blue</item>
+        <item name="colorSecondary">@color/primary</item>
+        <item name="colorSecondaryVariant">@color/primary</item>
+        <item name="colorOnSecondary">@color/primary</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >@color/light_white</item>
         <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+    </style>
+    <style name="Subtitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+    </style>
+
+    //shape
+
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RoundedSquare">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="CornerCut">
+        <item name="cornerSize">15dp</item>
+        <item name="cornerFamily">cut</item>
+    </style>
+
+    <style name="DiamondCut">
+        <item name="cornerSize">75dp</item>
+        <item name="cornerFamily">cut</item>
+    </style>
+
+    <style name="SpecificCornerCut">
+        <item name="cornerSizeTopRight">75dp</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerSizeBottomLeft">75dp</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+    </style>
+
+    <style name="SpecificCornerRounded">
+        <item name="cornerSizeTopRight">75dp</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeBottomLeft">75dp</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
     </style>
 </resources>

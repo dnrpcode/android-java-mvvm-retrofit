@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="32dp"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="20dp">
+
+        <ImageButton
+            android:id="@+id/btnHamburger"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/button_hamburger"
+            android:src="@drawable/button_hamburger" />
+
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnNotif"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/button"
+            android:src="@drawable/button_notification" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imvCircular"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/border"
+            android:layout_marginLeft="8dp"
+            android:src="@mipmap/profile"
+            app:shapeAppearanceOverlay="@style/Circular" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hallo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hallo"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Title"
+        android:layout_marginTop="8dp"
+        android:text="@string/title_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hallo" />
+
+    <LinearLayout
+        android:id="@+id/conSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/rounded_searchbar"
+            app:queryHint="Search Movie" />
+
+        <ImageButton
+            android:id="@+id/btnFilter"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/primary"
+            android:contentDescription="@string/button_filter"
+            app:srcCompat="@drawable/ic_slidershorizontal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtCategories"
+        style="@style/Subtitle"
+        android:layout_marginTop="28dp"
+        android:text="@string/categories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conSearch" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/txtCategories"
+        tools:listitem="@layout/fragment_category" />
+
+    <TextView
+        android:id="@+id/txtMostPopularMovie"
+        style="@style/Subtitle"
+        android:layout_marginTop="28dp"
+        android:text="@string/most_popular_movie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categories" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

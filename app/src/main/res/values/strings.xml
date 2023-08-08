@@ -2,4 +2,14 @@
     <string name="app_name">MovieApp</string>
     <string name="todo">TODO</string>
     <string name="overview">Overview</string>
+    <string name="hallo">Hallo</string>
+    <string name="title_home">Let’s relax and enjoy your favorite movie</string>
+    <string name="categories">Categories</string>
+    <string name="button_filter">button filter</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="romance">Romance</string>
+    <string name="button">button</string>
+    <string name="button_hamburger">button hamburger</string>
+    <string name="most_popular_movie">Most Popular Movie</string>
 </resources>
