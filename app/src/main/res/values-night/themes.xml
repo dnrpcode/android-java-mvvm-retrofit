@@ -10,6 +10,9 @@
         <item name="regularText">@color/white_regular_text</item>
         <item name="appbar">@color/dark</item>
         <item name="card">@color/light_dark</item>
+        <item name="secondary">@color/dark_secondary</item>
+        <item name="accent">@color/dark_accent</item>
+        <item name="item">@color/item_dark</item>
         <item name="appbarAttribute">@color/primary</item>
         <item name="border">@color/dark_accent</item>
         <!-- Secondary brand color. -->

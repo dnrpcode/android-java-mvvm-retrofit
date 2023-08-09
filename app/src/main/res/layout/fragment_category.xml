@@ -12,7 +12,7 @@
         android:id="@+id/imvCircular"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:background="?attr/border"
+        android:background="?attr/secondary"
         android:src="@drawable/ic_icon"
         app:shapeAppearanceOverlay="@style/Circular" />
 
@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="4dp"
         android:textSize="12sp"
+        android:textColor="?attr/accent"
         tools:text="@string/romance" />
 
 </LinearLayout>

@@ -4,7 +4,6 @@
     <color name="primary">#19A5B6</color>
     <color name="dotsBg">#192196F3</color>
     <color name="dots_half">#802196F3</color>
-    <color name="material_red">#EC7474</color>
     <color name="light_white">#FCFCFC</color>
     <color name="dark">#0E121A</color>
     <color name="light_dark">#171C26</color>
@@ -13,8 +12,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="white_bold_text">#FCFCFC</color>
     <color name="white_regular_text">#F2F5F6</color>
-    <color name="dark_accent">#020B26</color>
-    <color name="secondary">#0B1A3E</color>
+    <color name="light_accent">#32353C</color>
+    <color name="dark_accent">#C4D2E9</color>
+    <color name="light_secondary">#CFD1D3</color>
+    <color name="dark_secondary">#0B1A3E</color>
+    <color name="item_dark">#020B26</color>
+    <color name="item_light">#888F96</color>
 
     <attr format="color" name="card"/>
     <attr format="color" name="bg"/>
@@ -23,4 +26,8 @@
     <attr format="color" name="appbar"/>
     <attr format="color" name="appbarAttribute"/>
     <attr format="color" name="border"/>
+    <attr format="color" name="secondary"/>
+    <attr format="color" name="accent"/>
+    <attr format="color" name="item"/>
+
 </resources>
