@@ -20,8 +20,8 @@ public class GenreListViewModel extends ViewModel {
         return genreRepository.getGenre();
     }
 
-    public void getGenres(){
-        genreRepository.getGenres();
+    public void getGenreFromApi(){
+        genreRepository.getGenreFromApi();
     }
 
 }

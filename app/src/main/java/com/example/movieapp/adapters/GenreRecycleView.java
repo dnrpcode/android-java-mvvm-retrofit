@@ -37,7 +37,6 @@ public class GenreRecycleView extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     public void setGenre(List<GenreModel> list) {
         this.genreList = list;
-        System.out.println("genreList" + list);
         notifyDataSetChanged();
     }
 

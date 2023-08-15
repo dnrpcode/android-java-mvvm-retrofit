@@ -3,9 +3,7 @@ package com.example.movieapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
-import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -24,7 +22,7 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
 
     private GenreListViewModel genreListViewModel;
     private RecyclerView recyclerView, recyclerViewPopular;
-    private GenreRecycleView recycleViewAdapter;
+    private GenreRecycleView genreViewAdapter;
 
     private PopularMovieListViewModel popularMovieListViewModel;
     private SearchMovieListViewModel searchMovieListViewModel;
@@ -50,27 +48,42 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
         // data observer
         ObservasingAnyChangesPopularMovie();
         ObservasingAnyChangesSearchMovie();
-
-        // show popular movies
-        popularMovieListViewModel.getPopularMovie(1);
-
-        // configuring recyclerview
-        configureRecycleView();
-
-        // data observer
         ObservasingAnyChangesGenres();
 
-        // show popular movies
-        genreListViewModel.getGenres();
+        // get api
+        popularMovieListViewModel.getPopularMovie(1);
+        genreListViewModel.getGenreFromApi();
 
         // configuring recyclerview
+        configureRecycleViewGenre();
         configureRecycleViewPopular();
     }
 
     // init recycleView and adding data to it
-    private void configureRecycleView() {
-        recycleViewAdapter = new GenreRecycleView();
-        recyclerView.setAdapter(recycleViewAdapter);
+    private void configureRecycleViewGenre() {
+        genreViewAdapter = new GenreRecycleView();
+        recyclerView.setAdapter(genreViewAdapter);
+    }
+
+    // init recycleView and adding data to it
+    private void configureRecycleViewPopular() {
+        movieViewAdapter = new MovieRecycleView(this);
+        recyclerViewPopular.setAdapter(movieViewAdapter);
+
+        // pagination & loading nect results
+        recyclerViewPopular.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                if (!recyclerViewPopular.canScrollVertically(1)) {
+                    // here display next result
+                    if (isPopular) {
+                        popularMovieListViewModel.popularMovieNextPage();
+                    } else {
+                        searchMovieListViewModel.searchMovieNextPage();
+                    }
+                }
+            }
+        });
     }
 
 
@@ -80,7 +93,7 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
             if (GenreModels != null) {
                 for (GenreModel model : GenreModels) {
                     // get data
-                    recycleViewAdapter.setGenre(GenreModels);
+                    genreViewAdapter.setGenre(GenreModels);
                 }
             }
         });
@@ -103,27 +116,6 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
         });
 
         searchView.setOnClickListener(view -> isPopular = false);
-    }
-
-    // init recycleView and adding data to it
-    private void configureRecycleViewPopular() {
-        movieViewAdapter = new MovieRecycleView(this);
-        recyclerViewPopular.setAdapter(movieViewAdapter);
-
-        // pagination & loading nect results
-        recyclerViewPopular.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
-                if (!recyclerViewPopular.canScrollVertically(1)) {
-                    // here display next result
-                    if (isPopular) {
-                        popularMovieListViewModel.popularMovieNextPage();
-                    } else {
-                        searchMovieListViewModel.searchMovieNextPage();
-                    }
-                }
-            }
-        });
     }
 
     private void ObservasingAnyChangesSearchMovie() {

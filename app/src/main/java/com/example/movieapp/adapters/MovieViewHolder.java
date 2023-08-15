@@ -12,7 +12,7 @@ import com.example.movieapp.R;
 
 public class MovieViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    TextView title, tagline, releaseDate, rating, lang;
+    TextView title, releaseDate, rating, lang;
     ImageView poster;
     LinearLayout dots;
     OnMovieListener onMovieListener;
@@ -22,7 +22,6 @@ public class MovieViewHolder extends RecyclerView.ViewHolder implements View.OnC
         this.onMovieListener = onMovieListener;
 
         title = itemView.findViewById(R.id.title);
-//        tagline = itemView.findViewById(R.id.tagline);
         releaseDate = itemView.findViewById(R.id.releaseDate);
         rating = itemView.findViewById(R.id.ratingText);
         lang = itemView.findViewById(R.id.lang);
@@ -34,6 +33,6 @@ public class MovieViewHolder extends RecyclerView.ViewHolder implements View.OnC
 
     @Override
     public void onClick(View view) {
-        onMovieListener.onMovieClick(getPosition());
+        onMovieListener.onMovieClick(getBindingAdapterPosition());
     }
 }

@@ -42,7 +42,7 @@ public class GenreApiClient {
         return genreLiveData;
     }
 
-    public void getGenres() {
+    public void getGenreFromApi() {
         if (genreRunnable != null) {
             genreRunnable = null;
         }
@@ -69,7 +69,7 @@ public class GenreApiClient {
         public void run() {
             //getting request
             try {
-                Response response = getGenres().execute();
+                Response response = getGenreApi().execute();
                 if (cancelRequest) {
                     return;
                 }
@@ -97,7 +97,7 @@ public class GenreApiClient {
             }
         }
 
-        private Call<GenreResponses> getGenres() {
+        private Call<GenreResponses> getGenreApi() {
             return ApiService.getMovieApi().getGenres(Credentials.API_KEY);
         }
     }

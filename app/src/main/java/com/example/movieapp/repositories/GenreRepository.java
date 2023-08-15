@@ -29,8 +29,8 @@ public class GenreRepository {
         return genreApiClient.getGenre();
     }
 
-    public void getGenres() {
-        genreApiClient.getGenres();
+    public void getGenreFromApi() {
+        genreApiClient.getGenreFromApi();
     }
 
 }
