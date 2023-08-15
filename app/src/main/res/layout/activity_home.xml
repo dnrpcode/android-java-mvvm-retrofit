@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/bg"
-    android:paddingTop="32dp"
     tools:context=".HomeActivity">
 
     <ScrollView
+        android:paddingTop="32dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -96,9 +96,9 @@
                     android:id="@+id/btnFilter"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:background="@color/primary"
+                    android:background="@android:color/transparent"
                     android:contentDescription="@string/button_filter"
-                    app:srcCompat="@drawable/ic_slidershorizontal" />
+                    app:srcCompat="@drawable/button_filter" />
             </LinearLayout>
 
             <TextView

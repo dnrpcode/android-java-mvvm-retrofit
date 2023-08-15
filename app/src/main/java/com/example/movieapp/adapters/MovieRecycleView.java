@@ -65,74 +65,74 @@ public class MovieRecycleView extends RecyclerView.Adapter<RecyclerView.ViewHold
 
         for (float j = 2.0f; j <= 2.9f; j += 0.1f) {
             if (rating == j) {
-                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
+                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
             }
         }
 
         for (float j = 3.0f; j <= 3.9f; j += 0.1f) {
             if (rating == j) {
-                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
+                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
                 dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.dots_half));
             }
         }
 
         for (float j = 4.0f; j <= 4.9f; j += 0.1f) {
             if (rating == j) {
-                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
+                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
             }
         }
 
         for (float j = 5.0f; j <= 5.9f; j += 0.1f) {
             if (rating == j) {
-                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
+                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
                 dots[2].setTextColor(holder.itemView.getResources().getColor(R.color.dots_half));
             }
         }
 
         for (float j = 6.0f; j <= 6.9f; j += 0.1f) {
             if (rating == j) {
-                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[2].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
+                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[2].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
             }
         }
 
         for (float j = 7.0f; j <= 7.9f; j += 0.1f) {
             if (rating == j) {
-                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[2].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
+                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[2].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
                 dots[3].setTextColor(holder.itemView.getResources().getColor(R.color.dots_half));
             }
         }
 
         for (float j = 8.0f; j <= 8.9f; j += 0.1f) {
             if (rating == j) {
-                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[2].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[3].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
+                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[2].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[3].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
             }
         }
 
         for (float j = 9.0f; j <= 9.9f; j += 0.1f) {
             if (rating == j) {
-                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[2].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-                dots[3].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
+                dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[2].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+                dots[3].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
                 dots[4].setTextColor(holder.itemView.getResources().getColor(R.color.dots_half));
             }
         }
 
         if (rating == 10) {
-            dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-            dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-            dots[2].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-            dots[3].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
-            dots[4].setTextColor(holder.itemView.getResources().getColor(R.color.material_blue));
+            dots[0].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+            dots[1].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+            dots[2].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+            dots[3].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
+            dots[4].setTextColor(holder.itemView.getResources().getColor(R.color.primary));
         }
 
     }

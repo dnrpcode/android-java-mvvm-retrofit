@@ -90,7 +90,7 @@
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/dots"
             android:fontFamily="@font/poppins_semi_bold"
-            android:textColor="@color/material_blue"
+            android:textColor="@color/primary"
             android:textSize="14sp"
             tools:text="8.5" />
 

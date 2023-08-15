@@ -27,7 +27,6 @@ public class DetailMovieActivity extends AppCompatActivity {
         overview = findViewById(R.id.overview);
         releaseDate = findViewById(R.id.releaseDate);
         rating = findViewById(R.id.ratingTextDetail);
-//        lang = findViewById(R.id.l);
         poster = findViewById(R.id.posterDetail);
         dotsLayout = findViewById(R.id.dotsDetail);
 
@@ -44,7 +43,6 @@ public class DetailMovieActivity extends AppCompatActivity {
             int dotSize = 5;
 
             title.setText(model.getTitle());
-//        ((MovieViewHolder)holder).tagline.setText(movieList.get(position).get());
             releaseDate.setText(model.getRelease_date());
             overview.setText(model.getOverview());
             rating.setText(getRating);
@@ -73,74 +71,74 @@ public class DetailMovieActivity extends AppCompatActivity {
 
             for (float j = 2.0f; j <= 2.9f; j += 0.1f) {
                 if (ratings == j) {
-                    dots[0].setTextColor(this.getResources().getColor(R.color.material_blue));
+                    dots[0].setTextColor(this.getResources().getColor(R.color.primary));
                 }
             }
 
             for (float j = 3.0f; j <= 3.9f; j += 0.1f) {
                 if (ratings == j) {
-                    dots[0].setTextColor(this.getResources().getColor(R.color.material_blue));
+                    dots[0].setTextColor(this.getResources().getColor(R.color.primary));
                     dots[1].setTextColor(this.getResources().getColor(R.color.dots_half));
                 }
             }
 
             for (float j = 4.0f; j <= 4.9f; j += 0.1f) {
                 if (ratings == j) {
-                    dots[0].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[1].setTextColor(this.getResources().getColor(R.color.material_blue));
+                    dots[0].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[1].setTextColor(this.getResources().getColor(R.color.primary));
                 }
             }
 
             for (float j = 5.0f; j <= 5.9f; j += 0.1f) {
                 if (ratings == j) {
-                    dots[0].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[1].setTextColor(this.getResources().getColor(R.color.material_blue));
+                    dots[0].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[1].setTextColor(this.getResources().getColor(R.color.primary));
                     dots[2].setTextColor(this.getResources().getColor(R.color.dots_half));
                 }
             }
 
             for (float j = 6.0f; j <= 6.9f; j += 0.1f) {
                 if (ratings == j) {
-                    dots[0].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[1].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[2].setTextColor(this.getResources().getColor(R.color.material_blue));
+                    dots[0].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[1].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[2].setTextColor(this.getResources().getColor(R.color.primary));
                 }
             }
 
             for (float j = 7.0f; j <= 7.9f; j += 0.1f) {
                 if (ratings == j) {
-                    dots[0].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[1].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[2].setTextColor(this.getResources().getColor(R.color.material_blue));
+                    dots[0].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[1].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[2].setTextColor(this.getResources().getColor(R.color.primary));
                     dots[3].setTextColor(this.getResources().getColor(R.color.dots_half));
                 }
             }
 
             for (float j = 8.0f; j <= 8.9f; j += 0.1f) {
                 if (ratings == j) {
-                    dots[0].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[1].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[2].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[3].setTextColor(this.getResources().getColor(R.color.material_blue));
+                    dots[0].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[1].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[2].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[3].setTextColor(this.getResources().getColor(R.color.primary));
                 }
             }
 
             for (float j = 9.0f; j <= 9.9f; j += 0.1f) {
                 if (ratings == j) {
-                    dots[0].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[1].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[2].setTextColor(this.getResources().getColor(R.color.material_blue));
-                    dots[3].setTextColor(this.getResources().getColor(R.color.material_blue));
+                    dots[0].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[1].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[2].setTextColor(this.getResources().getColor(R.color.primary));
+                    dots[3].setTextColor(this.getResources().getColor(R.color.primary));
                     dots[4].setTextColor(this.getResources().getColor(R.color.dots_half));
                 }
             }
 
             if (ratings == 10) {
-                dots[0].setTextColor(this.getResources().getColor(R.color.material_blue));
-                dots[1].setTextColor(this.getResources().getColor(R.color.material_blue));
-                dots[2].setTextColor(this.getResources().getColor(R.color.material_blue));
-                dots[3].setTextColor(this.getResources().getColor(R.color.material_blue));
-                dots[4].setTextColor(this.getResources().getColor(R.color.material_blue));
+                dots[0].setTextColor(this.getResources().getColor(R.color.primary));
+                dots[1].setTextColor(this.getResources().getColor(R.color.primary));
+                dots[2].setTextColor(this.getResources().getColor(R.color.primary));
+                dots[3].setTextColor(this.getResources().getColor(R.color.primary));
+                dots[4].setTextColor(this.getResources().getColor(R.color.primary));
             }
         }
     }

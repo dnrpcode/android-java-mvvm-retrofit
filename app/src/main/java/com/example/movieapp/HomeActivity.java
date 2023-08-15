@@ -116,10 +116,11 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 if (!recyclerViewPopular.canScrollVertically(1)) {
                     // here display next result
-//                    searchMovieListViewModel.searchMovieNextPage();
-//                    if (isPopular) {
-                    popularMovieListViewModel.popularMovieNextPage();
-//                    }
+                    if (isPopular) {
+                        popularMovieListViewModel.popularMovieNextPage();
+                    } else {
+                        searchMovieListViewModel.searchMovieNextPage();
+                    }
                 }
             }
         });
