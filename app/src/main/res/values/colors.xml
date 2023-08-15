@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    universal-->
     <color name="primary">#19A5B6</color>
-    <color name="dotsBg">#192196F3</color>
     <color name="dots_half">#9519A5B6</color>
-    <color name="light_white">#FCFCFC</color>
-    <color name="dark">#0E121A</color>
-    <color name="light_dark">#171C26</color>
-    <color name="black_bold_text">#4F565E</color>
+    <color name="dotsBg">#192196F3</color>
+
+<!--    light-->
+    <color name="light">#FCFCFC</color>
+    <color name="black_bold_text">#313438</color>
     <color name="black_regular_text">#888F96</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="white_bold_text">#FCFCFC</color>
-    <color name="white_regular_text">#F2F5F6</color>
     <color name="light_accent">#32353C</color>
-    <color name="dark_accent">#C4D2E9</color>
     <color name="light_secondary">#CFD1D3</color>
-    <color name="dark_secondary">#0B1A3E</color>
-    <color name="item_dark">#020B26</color>
     <color name="item_light">#888F96</color>
 
-    <attr format="color" name="card"/>
+<!--    dark-->
+    <color name="dark">#0E121A</color>
+    <color name="white_bold_text">#FCFCFC</color>
+    <color name="white_regular_text">#F2F5F6</color>
+    <color name="dark_accent">#C4D2E9</color>
+    <color name="dark_secondary">#0B1A3E</color>
+    <color name="item_dark">#020B26</color>
+
+<!--    themes-->
     <attr format="color" name="bg"/>
     <attr format="color" name="boldText"/>
     <attr format="color" name="regularText"/>

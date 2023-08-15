@@ -4,12 +4,10 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary</item>
-        <item name="colorOnPrimary">@color/light_dark</item>
         <item name="bg">@color/dark</item>
         <item name="boldText">@color/white_bold_text</item>
         <item name="regularText">@color/white_regular_text</item>
         <item name="appbar">@color/dark</item>
-        <item name="card">@color/light_dark</item>
         <item name="secondary">@color/dark_secondary</item>
         <item name="accent">@color/dark_accent</item>
         <item name="item">@color/item_dark</item>
