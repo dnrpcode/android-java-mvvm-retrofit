@@ -60,19 +60,6 @@
                     android:textSize="18sp"
                     tools:text="2 Aug 2023" />
 
-                <!--                <TextView-->
-                <!--                    android:id="@+id/genreDetail"-->
-                <!--                    android:layout_below="@+id/titleDetail"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginTop="10dp"-->
-                <!--                    android:layout_marginStart="30dp"-->
-                <!--                    android:layout_marginEnd="30dp"-->
-                <!--                    android:fontFamily="@font/poppins_medium"-->
-                <!--                    android:textColor="?attr/boldText"-->
-                <!--                    android:textSize="18sp"-->
-                <!--                    android:text="@string/action_adventure"/>-->
-
                 <TextView
                     android:id="@+id/ratingTextDetail"
                     android:layout_width="wrap_content"

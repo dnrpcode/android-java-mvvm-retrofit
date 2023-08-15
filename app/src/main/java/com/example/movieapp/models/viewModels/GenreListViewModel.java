@@ -4,9 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.movieapp.models.GenreModel;
-import com.example.movieapp.models.MovieModel;
 import com.example.movieapp.repositories.GenreRepository;
-import com.example.movieapp.repositories.PopularMovieRepository;
 
 import java.util.List;
 
