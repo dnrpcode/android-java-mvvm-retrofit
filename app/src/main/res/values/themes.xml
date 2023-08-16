@@ -10,7 +10,7 @@
         <item name="appbar">@color/light</item>
         <item name="secondary">@color/light_secondary</item>
         <item name="accent">@color/light_accent</item>
-        <item name="item">@color/item_light</item>
+        <item name="item">@color/light_secondary</item>
         <item name="appbarAttribute">@color/primary</item>
         <item name="border">@color/dark_accent</item>
         <item name="colorSecondary">@color/primary</item>
@@ -40,6 +40,13 @@
 
     <style name="Circular">
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Category" >
+        <item name="cornerSize">50%</item>
+        <item name="borderWidth">3dp</item>
+        <item name="strokeColor">?attr/secondary</item>
+        <item name="backgroundColor">?attr/item</item>
     </style>
 
     <style name="RoundedSquare">

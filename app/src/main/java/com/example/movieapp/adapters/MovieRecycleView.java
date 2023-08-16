@@ -18,17 +18,17 @@ import java.util.List;
 public class MovieRecycleView extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<MovieModel> movieList;
-    private final OnMovieListener onMovieListener;
+    private final OnHomeListener onHomeListener;
 
-    public MovieRecycleView(OnMovieListener onMovieListener) {
-        this.onMovieListener = onMovieListener;
+    public MovieRecycleView(OnHomeListener onHomeListener) {
+        this.onHomeListener = onHomeListener;
     }
 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_list, parent, false);
-        return new MovieViewHolder(view, onMovieListener);
+        return new MovieViewHolder(view, onHomeListener);
     }
 
     @Override

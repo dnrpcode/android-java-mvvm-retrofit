@@ -74,13 +74,10 @@ public class GenreApiClient {
                     return;
                 }
 
-                System.out.println("response" + response);
                 if (response.isSuccessful()) {
                     if (response.code() == 200) {
                         assert response.body() != null;
                         List<GenreModel> genreList = new ArrayList<>(((GenreResponses) response.body()).getGenres());
-                        System.out.println("successful"+genreList);
-
                         genreLiveData.postValue(genreList);
                     } else {
                         assert response.errorBody() != null;

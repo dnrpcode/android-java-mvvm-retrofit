@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/category"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/border"
-    android:gravity="center"
-    android:padding="6dp">
+    app:cardBackgroundColor="?attr/item"
+    app:cardCornerRadius="26dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imvCircular"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:background="?attr/secondary"
-        android:src="@drawable/ic_icon"
-        app:shapeAppearanceOverlay="@style/Circular" />
-
-    <TextView
-        android:id="@+id/nameCategory"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="4dp"
-        android:textSize="12sp"
-        android:textColor="?attr/accent"
-        tools:text="@string/romance" />
+        android:gravity="center"
+        android:padding="6dp">
 
-</LinearLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imvCircular"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?attr/secondary"
+            android:src="@drawable/ic_icon"
+            app:shapeAppearanceOverlay="@style/Circular" />
+
+        <TextView
+            android:id="@+id/nameCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:textColor="?attr/accent"
+            android:textSize="12sp"
+            tools:text="@string/romance" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -3,9 +3,7 @@ package com.example.movieapp.repositories;
 import androidx.lifecycle.LiveData;
 
 import com.example.movieapp.models.GenreModel;
-import com.example.movieapp.models.MovieModel;
 import com.example.movieapp.request.GenreApiClient;
-import com.example.movieapp.request.PopularMovieApiClient;
 
 import java.util.List;
 

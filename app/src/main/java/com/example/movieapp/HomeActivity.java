@@ -11,14 +11,15 @@ import android.os.Bundle;
 
 import com.example.movieapp.adapters.GenreRecycleView;
 import com.example.movieapp.adapters.MovieRecycleView;
-import com.example.movieapp.adapters.OnMovieListener;
+import com.example.movieapp.adapters.OnHomeListener;
 import com.example.movieapp.models.GenreModel;
 import com.example.movieapp.models.MovieModel;
 import com.example.movieapp.models.viewModels.GenreListViewModel;
 import com.example.movieapp.models.viewModels.PopularMovieListViewModel;
 import com.example.movieapp.models.viewModels.SearchMovieListViewModel;
+import com.example.movieapp.repositories.GenreRepository;
 
-public class HomeActivity extends AppCompatActivity implements OnMovieListener {
+public class HomeActivity extends AppCompatActivity implements OnHomeListener {
 
     private GenreListViewModel genreListViewModel;
     private RecyclerView recyclerView, recyclerViewPopular;
@@ -27,6 +28,8 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
     private PopularMovieListViewModel popularMovieListViewModel;
     private SearchMovieListViewModel searchMovieListViewModel;
     private MovieRecycleView movieViewAdapter;
+
+    private GenreRepository genreRepository;
 
     private boolean isPopular = true;
 
@@ -61,7 +64,7 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
 
     // init recycleView and adding data to it
     private void configureRecycleViewGenre() {
-        genreViewAdapter = new GenreRecycleView();
+        genreViewAdapter = new GenreRecycleView(this);
         recyclerView.setAdapter(genreViewAdapter);
     }
 
@@ -86,19 +89,6 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
         });
     }
 
-
-    private void ObservasingAnyChangesGenres() {
-        genreListViewModel.getGenre().observe(this, GenreModels -> {
-            // observing any data changes
-            if (GenreModels != null) {
-                for (GenreModel model : GenreModels) {
-                    // get data
-                    genreViewAdapter.setGenre(GenreModels);
-                }
-            }
-        });
-    }
-
     private void searchSetup() {
         final SearchView searchView = findViewById(R.id.searchView);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -116,6 +106,16 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
         });
 
         searchView.setOnClickListener(view -> isPopular = false);
+    }
+
+    private void ObservasingAnyChangesGenres() {
+        genreListViewModel.getGenre().observe(this, genreModels -> {
+            if (genreModels != null) {
+                for (GenreModel model : genreModels) {
+                    genreViewAdapter.setGenre(genreModels);
+                }
+            }
+        });
     }
 
     private void ObservasingAnyChangesSearchMovie() {
@@ -140,6 +140,12 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
                 }
             }
         });
+    }
+
+    @Override
+    public void onGenreClick(int pos) {
+        int idActive = genreViewAdapter.getSelectedGenre(pos).getId();
+        genreViewAdapter.setActiveGenres(idActive);
     }
 
     @Override

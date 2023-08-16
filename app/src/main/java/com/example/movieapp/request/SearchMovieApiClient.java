@@ -81,7 +81,6 @@ public class SearchMovieApiClient {
                 }
 
                 if (response.isSuccessful()) {
-                    System.out.println("response" + response);
                     if (response.code() == 200) {
                         assert response.body() != null;
                         List<MovieModel> searchMovieList = new ArrayList<>(((SearchMovieResponses) response.body()).getMovies());
@@ -113,7 +112,6 @@ public class SearchMovieApiClient {
 
         // method getPopularMovie
         private Call<SearchMovieResponses> searchMovie(String query, int page) {
-            System.out.println("query nya " + query + page);
             return ApiService.getMovieApi().searchMovie(Credentials.API_KEY, query, page);
         }
     }

@@ -15,11 +15,11 @@ public class MovieViewHolder extends RecyclerView.ViewHolder implements View.OnC
     TextView title, releaseDate, rating, lang;
     ImageView poster;
     LinearLayout dots;
-    OnMovieListener onMovieListener;
+    OnHomeListener onHomeListener;
 
-    public MovieViewHolder(@NonNull View itemView, OnMovieListener onMovieListener) {
+    public MovieViewHolder(@NonNull View itemView, OnHomeListener onHomeListener) {
         super(itemView);
-        this.onMovieListener = onMovieListener;
+        this.onHomeListener = onHomeListener;
 
         title = itemView.findViewById(R.id.title);
         releaseDate = itemView.findViewById(R.id.releaseDate);
@@ -33,6 +33,6 @@ public class MovieViewHolder extends RecyclerView.ViewHolder implements View.OnC
 
     @Override
     public void onClick(View view) {
-        onMovieListener.onMovieClick(getBindingAdapterPosition());
+        onHomeListener.onMovieClick(getBindingAdapterPosition());
     }
 }

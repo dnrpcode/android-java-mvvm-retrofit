@@ -76,7 +76,6 @@ public class PopularMovieApiClient {
                     return;
                 }
 
-                System.out.println("response" + response);
                 if (response.isSuccessful()) {
                     if (response.code() == 200) {
                         assert response.body() != null;
