@@ -12,7 +12,6 @@
         <item name="accent">@color/dark_accent</item>
         <item name="item">@color/item_dark</item>
         <item name="appbarAttribute">@color/primary</item>
-        <item name="border">@color/dark_accent</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/primary</item>
         <item name="colorSecondaryVariant">@color/primary</item>
